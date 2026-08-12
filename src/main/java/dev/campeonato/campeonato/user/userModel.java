@@ -1,4 +1,4 @@
-package dev.campeonato.campeonato;
+package dev.campeonato.campeonato.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 public class userModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    long id_user;
 
     private String nome;
     private String email;
@@ -23,6 +23,14 @@ public class userModel {
     private int los;
     private int jgDisp;
     private int campDisp;
+
+    public long getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(long id_user) {
+        this.id_user = id_user;
+    }
 
     public String getSexo() {
         return sexo;
@@ -94,6 +102,9 @@ public class userModel {
 
     public void setWin(int win) {
         this.win = win;
+    }
+
+    public userModel() {
     }
 
     public userModel(String nome, String email, int idade, String nick, int win, String sexo, int los, int jgDisp,
