@@ -14,17 +14,48 @@ public class userModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    String nome;
-    String email;
-    int idade;
-    String nick;
-    String sexo;
-    int win;
-    int los;
-    int jgDisp;
-    int campDisp;
+    private String nome;
+    private String email;
+    private int idade;
+    private String nick;
+    private String sexo;
+    private int win;
+    private int los;
+    private int jgDisp;
+    private int campDisp;
 
-    
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public int getLos() {
+        return los;
+    }
+
+    public void setLos(int los) {
+        this.los = los;
+    }
+
+    public int getJgDisp() {
+        return jgDisp;
+    }
+
+    public void setJgDisp(int jgDisp) {
+        this.jgDisp = jgDisp;
+    }
+
+    public int getCampDisp() {
+        return campDisp;
+    }
+
+    public void setCampDisp(int campDisp) {
+        this.campDisp = campDisp;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -41,11 +72,11 @@ public class userModel {
         this.email = email;
     }
 
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(String idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
@@ -57,19 +88,24 @@ public class userModel {
         this.nick = nick;
     }
 
-    public int getVitorias() {
-        return vitorias;
+    public int getWin() {
+        return win;
     }
 
-    public void setVitorias(int vitorias) {
-        this.vitorias = vitorias;
+    public void setWin(int win) {
+        this.win = win;
     }
 
-    public userModel(String nome, String email, String idade, String nick, int vitorias) {
+    public userModel(String nome, String email, int idade, String nick, int win, String sexo, int los, int jgDisp,
+            int campDisp) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
         this.nick = nick;
-        this.vitorias = vitorias;
+        this.win = win;
+        this.sexo = sexo;
+        this.los = los;
+        this.jgDisp = jgDisp;
+        this.campDisp = campDisp;
     }
 }
